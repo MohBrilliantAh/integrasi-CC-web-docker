@@ -51,11 +51,11 @@ pipeline {
                 ping 127.0.0.1 -n 20 >nul
 
                 echo ==== CEK KONEKSI KE LARAVEL ====
-                curl -I http://127.0.0.1:8081 || echo "⚠ Gagal akses Laravel di port 8081"
+                curl -I http://127.0.0.1:8080 || echo "⚠ Gagal akses Laravel di port 8081"
                 
                 echo.
                 echo ==== ISI HALAMAN (HARUSNYA MUNCUL HALAMAN LARAVEL) ====
-                curl http://127.0.0.1:8081 || echo "⚠ Gagal ambil isi halaman"
+                curl http://127.0.0.1:8080 || echo "⚠ Gagal ambil isi halaman"
                 echo ===============================
                 '''
             }
